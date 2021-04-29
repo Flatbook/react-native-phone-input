@@ -1,0 +1,16 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "13:00"
+  pull-request-branch-name:
+    separator: "-"
+  open-pull-requests-limit: 3
+  ignore:
+  - dependency-name: google-libphonenumber
+    versions:
+    - 3.2.16
+    - 3.2.17
+    - 3.2.18
